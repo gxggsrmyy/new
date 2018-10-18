@@ -1,0 +1,185 @@
+package helpers
+
+import (
+	"crypto/tls"
+)
+
+func TLSCipher(name string) uint16 {
+	switch name {
+	case "TLS_AES_128_GCM_SHA256":
+		return tls.TLS_AES_128_GCM_SHA256
+	case "TLS_AES_256_GCM_SHA384":
+		return tls.TLS_AES_256_GCM_SHA384
+	case "TLS_CHACHA20_POLY1305_SHA256":
+		return tls.TLS_CHACHA20_POLY1305_SHA256
+	case "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA":
+		return tls.TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA
+	case "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256":
+		return tls.TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256
+	case "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256":
+		return tls.TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
+	case "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA":
+		return tls.TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA
+	case "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384":
+		return tls.TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
+	case "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305":
+		return tls.TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305
+	case "TLS_ECDHE_ECDSA_WITH_RC4_128_SHA":
+		return tls.TLS_ECDHE_ECDSA_WITH_RC4_128_SHA
+	case "TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA":
+		return tls.TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA
+	case "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA":
+		return tls.TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+	case "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256":
+		return tls.TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256
+	case "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256":
+		return tls.TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+	case "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA":
+		return tls.TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA
+	case "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384":
+		return tls.TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+	case "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305":
+		return tls.TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305
+	case "TLS_ECDHE_RSA_WITH_RC4_128_SHA":
+		return tls.TLS_ECDHE_RSA_WITH_RC4_128_SHA
+	case "TLS_RSA_WITH_3DES_EDE_CBC_SHA":
+		return tls.TLS_RSA_WITH_3DES_EDE_CBC_SHA
+	case "TLS_RSA_WITH_AES_128_CBC_SHA":
+		return tls.TLS_RSA_WITH_AES_128_CBC_SHA
+	case "TLS_RSA_WITH_AES_128_CBC_SHA256":
+		return tls.TLS_RSA_WITH_AES_128_CBC_SHA256
+	case "TLS_RSA_WITH_AES_128_GCM_SHA256":
+		return tls.TLS_RSA_WITH_AES_128_GCM_SHA256
+	case "TLS_RSA_WITH_AES_256_CBC_SHA":
+		return tls.TLS_RSA_WITH_AES_256_CBC_SHA
+	case "TLS_RSA_WITH_AES_256_GCM_SHA384":
+		return tls.TLS_RSA_WITH_AES_256_GCM_SHA384
+	case "TLS_RSA_WITH_RC4_128_SHA":
+		return tls.TLS_RSA_WITH_RC4_128_SHA
+	//cipher suite added by phuslu
+	case "TLS_RSA_WITH_AES_256_CBC_SHA256":
+		return tls.TLS_RSA_WITH_AES_256_CBC_SHA256
+	}
+	return 0
+}
+
+func TLSCipherName(value uint16) string {
+	switch value {
+	case tls.TLS_AES_128_GCM_SHA256:
+		return "TLS_AES_128_GCM_SHA256"
+	case tls.TLS_AES_256_GCM_SHA384:
+		return "TLS_AES_256_GCM_SHA384"
+	case tls.TLS_CHACHA20_POLY1305_SHA256:
+		return "TLS_CHACHA20_POLY1305_SHA256"
+	case tls.TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA:
+		return "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA"
+	case tls.TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256:
+		return "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256"
+	case tls.TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256:
+		return "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256"
+	case tls.TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA:
+		return "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA"
+	case tls.TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384:
+		return "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384"
+	case tls.TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305:
+		return "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305"
+	case tls.TLS_ECDHE_ECDSA_WITH_RC4_128_SHA:
+		return "TLS_ECDHE_ECDSA_WITH_RC4_128_SHA"
+	case tls.TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA:
+		return "TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA"
+	case tls.TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA:
+		return "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA"
+	case tls.TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256:
+		return "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"
+	case tls.TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256:
+		return "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256"
+	case tls.TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA:
+		return "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA"
+	case tls.TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384:
+		return "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384"
+	case tls.TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305:
+		return "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305"
+	case tls.TLS_ECDHE_RSA_WITH_RC4_128_SHA:
+		return "TLS_ECDHE_RSA_WITH_RC4_128_SHA"
+	case tls.TLS_RSA_WITH_3DES_EDE_CBC_SHA:
+		return "TLS_RSA_WITH_3DES_EDE_CBC_SHA"
+	case tls.TLS_RSA_WITH_AES_128_CBC_SHA:
+		return "TLS_RSA_WITH_AES_128_CBC_SHA"
+	case tls.TLS_RSA_WITH_AES_128_CBC_SHA256:
+		return "TLS_RSA_WITH_AES_128_CBC_SHA256"
+	case tls.TLS_RSA_WITH_AES_128_GCM_SHA256:
+		return "TLS_RSA_WITH_AES_128_GCM_SHA256"
+	case tls.TLS_RSA_WITH_AES_256_CBC_SHA:
+		return "TLS_RSA_WITH_AES_256_CBC_SHA"
+	case tls.TLS_RSA_WITH_AES_256_GCM_SHA384:
+		return "TLS_RSA_WITH_AES_256_GCM_SHA384"
+	case tls.TLS_RSA_WITH_RC4_128_SHA:
+		return "TLS_RSA_WITH_RC4_128_SHA"
+	//cipher suite added by phuslu
+	case tls.TLS_RSA_WITH_AES_256_CBC_SHA256:
+		return "TLS_RSA_WITH_AES_256_CBC_SHA256"
+	}
+	return ""
+}
+
+func HasECCCiphers(cipherSuites []uint16) bool {
+	for _, cipher := range cipherSuites {
+		switch cipher {
+		case tls.TLS_AES_128_GCM_SHA256,
+			tls.TLS_AES_256_GCM_SHA384,
+			tls.TLS_CHACHA20_POLY1305_SHA256,
+			tls.TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,
+			tls.TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,
+			tls.TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA,
+			tls.TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA:
+			return true
+		}
+	}
+	return false
+}
+
+func SupportsECDSA(hello *tls.ClientHelloInfo) bool {
+	// The "signature_algorithms" extension, if present, limits the key exchange
+	// algorithms allowed by the cipher suites. See RFC 5246, section 7.4.1.4.1.
+	if hello.SignatureSchemes != nil {
+		ecdsaOK := false
+	schemeLoop:
+		for _, scheme := range hello.SignatureSchemes {
+			const tlsECDSAWithSHA1 tls.SignatureScheme = 0x0203 // constant added in Go 1.10
+			switch scheme {
+			case tlsECDSAWithSHA1, tls.ECDSAWithP256AndSHA256,
+				tls.ECDSAWithP384AndSHA384, tls.ECDSAWithP521AndSHA512:
+				ecdsaOK = true
+				break schemeLoop
+			}
+		}
+		if !ecdsaOK {
+			return false
+		}
+	}
+	if hello.SupportedCurves != nil {
+		ecdsaOK := false
+		for _, curve := range hello.SupportedCurves {
+			if curve == tls.CurveP256 {
+				ecdsaOK = true
+				break
+			}
+		}
+		if !ecdsaOK {
+			return false
+		}
+	}
+	for _, suite := range hello.CipherSuites {
+		switch suite {
+		case tls.TLS_ECDHE_ECDSA_WITH_RC4_128_SHA,
+			tls.TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA,
+			tls.TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA,
+			tls.TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256,
+			tls.TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,
+			tls.TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,
+			tls.TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305:
+			return true
+		}
+	}
+	return false
+}

@@ -1,0 +1,30 @@
+{
+	"Transport": {
+		"Dialer": {
+			"Timeout": 10,
+			"KeepAlive": 180,
+			"DualStack": false,
+			"DNSCacheExpiry": 600,
+			"DNSCacheSize": 8192
+		},
+		"Proxy": {
+			"Enabled": false,
+			"URL": "socks5://127.0.0.1:1080",
+		},
+		"TLSClientConfig": {
+			"MinVersion": "TLSv1.2",
+			"InsecureSkipVerify": false,
+			"ClientSessionCacheSize": 1000
+		},
+		"EnableRemoteDNS": false,
+		"DNSServer": "114.114.114.114",
+		"DNSBlackLocalIP": true,
+		"DisableKeepAlives": false,
+		"DisableCompression": false,
+		"TLSHandshakeTimeout": 8,
+		"MaxIdleConnsPerHost": 16,
+		"Hosts": {
+			"example.com": "127.0.0.1",
+		}
+	}
+}
