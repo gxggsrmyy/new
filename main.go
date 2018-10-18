@@ -13,13 +13,13 @@ import (
 
 	"github.com/MeABc/glog"
 
-	"github.com/gxggsrmyy/new/common/filters"
-	"github.com/gxggsrmyy/new/common/helpers"
-	"github.com/gxggsrmyy/new/common/storage"
-	"github.com/gxggsrmyy/new/httpproxy"
+	"./common/filters"
+	"./common/helpers"
+	"./common/storage"
+	"./httpproxy"
 
-	"github.com/gxggsrmyy/new/common/filters/gae"
-	"github.com/gxggsrmyy/new/common/filters/php"
+	"./common/filters/gae"
+	"./common/filters/php"
 )
 
 var (
